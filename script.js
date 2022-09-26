@@ -38,17 +38,19 @@ function playRound () {
 
 function game() {
 
+    let finalSentence = `The computer scored ${computerPoints} and you scored ${userPoints}.`;
+
     while (round < 5) {
         let result = playRound();
         console.log(result);
     }
 
     if (userPoints > computerPoints) {
-        return `You win! The computer scored ${computerPoints} and you scored ${userPoints}.`;
+        return `You win! ${finalSentence}`;
     } else if (userPoints < computerPoints) {
-    return `You lost. The computer scored ${computerPoints} and you scored ${userPoints}.`;
+    return `You lost. ${finalSentence}`;
     } else {
-        `It was a draw. The computer scored ${computerPoints} and you scored ${userPoints}.`;
+        `It was a draw. ${finalSentence}`;
     }
 
 }
